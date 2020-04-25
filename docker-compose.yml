@@ -43,7 +43,7 @@ services:
       - wordpress
       - db
   #用法
-  #docker-compose exec  -it wp-cli  /bin/bash
+  #docker exec  -it wp-cli  /bin/bash
   #然后 ：
   #wp user list
 
