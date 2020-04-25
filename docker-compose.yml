@@ -30,6 +30,7 @@ services:
 
   wp-cli:
     image: wordpress:cli
+    tty: true
     volumes:
       - ./wordpress:/var/www/html
     command: help
