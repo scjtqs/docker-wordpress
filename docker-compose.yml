@@ -30,6 +30,7 @@ services:
 
   wp-cli:
     image: wordpress:cli
+    container_name: wp-cli
     tty: true
     volumes:
       - ./wordpress:/var/www/html
