@@ -30,5 +30,6 @@ services:
     image: wordpress:cli
     volumes:
       - ./wordpress:/var/www/html
+    command: user list
   #docker run -it --rm --volumes-from some-wordpress --network container:some-wordpress  wordpress:cli user list
 
