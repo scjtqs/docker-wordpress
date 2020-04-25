@@ -32,7 +32,7 @@ services:
     image: wordpress:cli
     volumes:
       - ./wordpress:/var/www/html
-    command: user list
+    command: help
     depends_on:
       - wordpress
       - db
