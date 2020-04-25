@@ -14,6 +14,8 @@ services:
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - ./wordpress:/var/www/html
+    depends_on:
+      - db
 
   db:
     image: mariadb:10.1
@@ -31,5 +33,8 @@ services:
     volumes:
       - ./wordpress:/var/www/html
     command: user list
+    depends_on:
+      - wordpress
+      - db
   #docker run -it --rm --volumes-from some-wordpress --network container:some-wordpress  wordpress:cli user list
 
