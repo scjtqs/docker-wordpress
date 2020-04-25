@@ -33,12 +33,17 @@ services:
     tty: true
     volumes:
       - ./wordpress:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
     command: help
     depends_on:
       - wordpress
       - db
   #用法
-  #docker-compose exec  -it wp-cli  命令
-  #例如 ：
-  #docker-compose exec  -it wp-cli  user list
+  #docker-compose exec  -it wp-cli  /bin/bash
+  #然后 ：
+  #wp user list
 
