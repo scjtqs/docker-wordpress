@@ -16,7 +16,7 @@ services:
       - ./wordpress:/var/www/html
 
   db:
-    image: mysql:5.7
+    image: mariadb:10.1
     restart: always
     environment:
       MYSQL_DATABASE: wordpress
