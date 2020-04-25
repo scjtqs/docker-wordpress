@@ -36,5 +36,8 @@ services:
     depends_on:
       - wordpress
       - db
-  #docker run -it --rm --volumes-from some-wordpress --network container:some-wordpress  wordpress:cli user list
+  #用法
+  #docker-compose exec  -it wp-cli  命令
+  #例如 ：
+  #docker-compose exec  -it wp-cli  user list
 
